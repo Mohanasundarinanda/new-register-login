@@ -1,0 +1,32 @@
+<div class="bg_con" >
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 bg_back">
+            <h3 style="text-align: center"><b>SALES PERSON REGISTRATION</b></h3>
+            <p style="text-align: center"><b>Fill the Form</b></p>
+            <form [formGroup]="registrationForm" (ngSubmit)="createUser()">
+              <div class="form-group">
+                <label for="Name">Name<span style="color: red">*</span></label>
+                <input type="text" class="form-control" formControlName="name" required>
+              </div>
+              <div class="form-group">
+                <label for="Username">Username<span style="color: red">*</span></label>
+                <input type="text" class="form-control" formControlName="username" required>
+              </div>
+              <div class="form-group">
+                <label for="Email">Email<span style="color: red">*</span></label>
+                <input type="email" class="form-control" formControlName="email" required>
+              </div>
+              <div class="form-group">
+                <label for="Password">Password<span style="color: red">*</span></label>
+                <input type="password" class="form-control" formControlName="password" required>
+              </div>
+              <div class="form-group">
+                <button type="submit" [disabled]=!registrationForm.valid class="form-control but_bg">Register</button>
+              </div>
+            </form>
+            
+</div>
+        <div class="col-md-3"></div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+.bg_nav{
+    background: transparent !important;
+    color: blue;
+    font-weight: 600;
+}
+
+.bg_nav:hover{
+    background: transparent !important;
+}

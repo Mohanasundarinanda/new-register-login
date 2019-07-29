@@ -1,0 +1,12 @@
+<div class="sidebar">
+  <nav class="sidebar-nav">
+    <ul class="nav">
+      <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}} bg_nav nav-title nav-item">
+        <a class="bg_nav" [routerLink]="[menuItem.path]">
+          <i class="now-ui-icons {{menuItem.icon}}"></i>
+          <p>{{menuItem.title}}</p><hr>
+        </a>
+      </li>
+    </ul>
+  </nav>  
+</div>

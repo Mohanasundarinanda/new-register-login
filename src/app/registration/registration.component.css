@@ -1,0 +1,41 @@
+.bg_con{
+
+  background: #b9f2ff42;
+    padding: 6rem 0 12rem 0;
+    margin: -2rem 0 0 0;
+    overflow: hidden;
+    height: 100vh;
+}
+.but_bg{
+      margin-top: 2rem;
+    text-align: center;
+        width: 100%;
+            background: #1202a0;
+    color: white;    border: none;   font-weight: 600;
+}
+.but_bg:hover{
+      margin-top: 2rem;
+  border: 1px solid #1202a0;
+  background: white;
+  color: black
+}
+.bg_back{
+    background-color: white;
+    height: 46rem;
+    max-height: 50rem;
+    box-shadow: 1px 1px 8px;
+    border-radius: 2rem;
+}
+.but_bg{
+      margin-top: 2rem;
+    text-align: center;
+        width: 100%;
+            background: #1202a0;
+    color: white;    border: none;   font-weight: 600;
+}
+.but_bg:hover{
+      margin-top: 2rem;
+  border: 1px solid #1202a0;
+  background: white;
+  color: black
+}

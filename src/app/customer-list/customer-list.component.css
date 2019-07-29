@@ -1,0 +1,35 @@
+
+
+.viewou:hover{
+    text-decoration:underline;
+    cursor: pointer;
+    color:blue;
+}
+.viewou{
+    color:blue;
+}
+.right{
+    float: right;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+  }
+
+  nb-progress-bar {
+    flex: 1;
+  }
+
+  .delete{
+    color: #ff386a;
+    font-size: 30px;
+  }
+  .edit{
+    color: #111010;
+    font-size: 30px;
+  }
+
+  label{
+    font-weight: 700
+  }

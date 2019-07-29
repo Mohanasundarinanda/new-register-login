@@ -1,0 +1,20 @@
+a.disabled {
+  color: rgba(212, 208, 208, 0.973);
+  cursor: not-allowed;
+  text-decoration: underline;
+}
+.bg_nav{
+  background: rgb(18, 2, 160);
+  color: white;
+  border: none;
+  border-radius: 0;
+}
+.a_col{
+  color: white;
+}
+li{
+  color: white;
+}
+a:hover{
+  color: rgb(255, 255, 255)
+}

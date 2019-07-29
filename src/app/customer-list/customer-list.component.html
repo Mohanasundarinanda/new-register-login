@@ -1,0 +1,171 @@
+<app-sidebar style="width: 15%;float: left;background: aliceblue;height: 100vh;margin-top:-2rem"></app-sidebar>
+
+<div style="width:85%;float:right;margin-top:-2rem">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb" sttle="float:right">
+      <!-- <li class="breadcrumb-item"><a href="#">Home</a></li> -->
+      <li class="breadcrumb-item active" aria-current="page">Customer List</li>
+    </ol>
+  </nav>
+  <div class="container-fluid" [ngSwitch]="content">
+    <div *ngSwitchDefault>
+
+      <h4 class="page_name"> Customer List</h4>
+      <div class="row conatiner">
+        <div class="col-md-6">
+          <button style="    background: #1202a0;" mat-raised-button color="primary" (click)="content='showSubContent'">
+            <span style="color: white" class="glyphicon glyphicon-plus"></span>
+          </button>
+        </div>
+        <div class="col-md-6">
+          <form>
+            <div class="form-group form-inline right">
+              Search:
+              <input class="form-control ml-2" type="text"  />
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="table-responsive conatiner">
+
+        <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">PhoneNumber</th>
+              <th scope="col">Services</th>
+              <th scope="col">Created Date</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let ou of ous$ | async; index as i">
+              <th scope="row">{{ i + 1 }}</th>
+              <td>
+                <p class="viewou" (click)="content='showSubContentTwo'">John Wick
+                  <!-- <ngb-highlight [result]="ou.OUName" [term]="filter.value"></ngb-highlight> -->
+                </p>
+              </td>
+              <td>
+              wick@gmail.com
+              
+                <!-- <ngb-highlight [result]="ou.OUAdmin" [term]="filter.value"></ngb-highlight> -->
+              </td>
+              <td>
+                +91 7708071422
+                
+                <!-- <ngb-highlight [result]="ou.TotalProjects" [term]="filter.value"></ngb-highlight> -->
+              </td>
+              <td>
+                24-07-2109
+                
+                <!-- <ngb-highlight [result]="ou.Clouds" [term]="filter.value"></ngb-highlight> -->
+              </td>
+              <td>
+                Azure Active Directory
+                <!-- <ngb-highlight [result]="ou.TotalResources" [term]="filter.value"></ngb-highlight> -->
+              </td>
+              <td>
+                <div style="display: flex;"><i (click)="content='showSubContentThree'" class="glyphicon glyphicon-pencil"></i>&nbsp;
+                  <i style="color: red" class="glyphicon glyphicon-trash"></i>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div *ngSwitchCase="'showSubContent'">
+      <h4 class="page_name"> Add Customer</h4>
+      <button mat-raised-button (click)="content='showMainContent'" style="margin-bottom: 10px;background: #1202a0;color: white">
+        <span class="glyphicon glyphicon-menu-left"></span>Back
+      </button>
+      <br>
+      <form action="">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="text" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+          <label for="number">Phone Number:</label>
+          <input type="text" class="form-control" id="number">
+        </div>
+        <div class="form-group">
+          <label for="service">Service:</label>
+          <input type="text" class="form-control" id="service">
+        </div>        
+      </form>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="c('Save click')">Save</button>
+      </div>
+    </div>
+    <div *ngSwitchCase="'showSubContentTwo'">
+
+
+      <h4 class="page_name"> View Customer Details</h4>
+      <button mat-raised-button (click)="content='showMainContent'" style="margin-bottom: 10px">
+        <mat-icon>keyboard_arrow_left</mat-icon>Back
+      </button>
+      <br>
+      <form action="">
+        <div class="form-group col-md-4">
+          <label for="name">Name:</label>
+          John Wick
+        </div>
+        <div class="form-group col-md-4">
+          <label for="email">Email:</label>
+           wick@gmail.com
+        </div>
+        <div class="form-group col-md-4">
+          <label for="number">Phone Number:</label>
+          +91 7708071422
+        </div>
+        <div class="form-group col-md-4">
+          <label for="qa">Created date:</label>
+          24-07-2109
+        </div>
+        <div class="form-group col-md-4" >
+          <label for="qa">Service:</label>
+          Azure Active Directory
+        </div>
+        
+      </form>
+    </div>
+
+    <div *ngSwitchCase="'showSubContentThree'">
+      <h4 class="page_name"> Edit Customer Detail</h4>
+      <button mat-raised-button (click)="content='showMainContent'" style="margin-bottom: 10px">
+        <mat-icon>keyboard_arrow_left</mat-icon>Back
+      </button>
+      <br>
+      <form action="">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="text" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+          <label for="number">Phone Number:</label>
+          <input type="text" class="form-control" id="number">
+        </div>
+        <div class="form-group">
+          <label for="service">Service:</label>
+          <input type="text" class="form-control" id="service">
+        </div> 
+      </form>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="c('Save click')">Update</button>
+      </div>
+    </div>
+  </div>
+</div> 

@@ -1,0 +1,15 @@
+<div class="bg_con" >
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 bg_back">
+            <h3 style="text-align: center"><b>SALES PERSON LOGIN</b></h3>
+            <p style="text-align: center"><b>Click here To Login</b></p>
+            <button style="text-align: center" *ngIf="!loggedIn" type="submit" class="but_bg btn btn-default" (click)="login()">Login</button>
+            <button style="text-align: center" *ngIf="!loggedIn" type="submit" class="but_bg btn btn-default"
+                (click)="regis()">Registration</button>
+        </div>
+        <div class="col-md-3"></div>
+
+    </div>
+
+</div>

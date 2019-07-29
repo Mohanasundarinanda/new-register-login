@@ -1,0 +1,20 @@
+<div class="">
+  <nav class="navbar navbar-default bg_nav">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand a_col" href="#">CLOUD INSIGHTS - CUSTOMER MANAGEMENT</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right a_col">
+        <li><a style="color: white"  *ngIf="!loggedIn" [routerLink]="['home']">Home</a></li>
+        <li><app-user-data *ngIf="loggedIn"></app-user-data></li>
+        <li><a style="color: white"  *ngIf="loggedIn" (click)="logout()"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+      </ul>
+      <!-- <ul class="nav navbar-nav navbar-right">
+        <li><a  *ngIf="!loggedIn"   (click)="login()"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a  *ngIf="loggedIn" (click)="logout()"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+      </ul> -->
+    </div>
+  </nav>
+  <!--This is to avoid reload during acquireTokenSilent() because of hidden iframe -->
+<router-outlet *ngIf="!isIframe"></router-outlet>
+</div>
